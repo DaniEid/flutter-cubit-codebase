@@ -31,8 +31,8 @@ and for sure will be responsible of fetching the data and handling the data from
 
 
 #### The Presentation layer
-Contains all the views, storyboards, custom views, custom cells and the view controllers
-each view model will be a child for BaseViewModel, and each view controller will be a child for BaseViewController where we should declare the viewmodel that will be used
+Contains all the views, widgets and their components
+
 
 #### The infrastructure layer
 Will have all the abstract classes/generics/routing and dependency injection
