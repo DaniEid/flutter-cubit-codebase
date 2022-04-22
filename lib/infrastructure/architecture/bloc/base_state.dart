@@ -30,11 +30,11 @@ class SuccessState<T> extends BaseState {
 
 ///Will represent the failure which will be emitted to the bloc
 class FailureState<T extends BaseError> extends BaseState {
-  final T error;
+  final T? error;
   FailureState(
     this.error,
   );
 
   @override
-  List<T> get props => [error];
+  List<T> get props => error != null ? [error!] : [];
 }

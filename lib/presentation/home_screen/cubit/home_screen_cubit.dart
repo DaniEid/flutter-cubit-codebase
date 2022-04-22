@@ -11,6 +11,10 @@ class HomeScreenCubit extends BaseCubit {
   Future<void> getDate() async {
     emit(LoadingState());
     final response = await useCase.getData();
-    emit(SuccessState<String>(response));
+    if (response.success) {
+      emit(SuccessState<String>(response.data!));
+    } else {
+      emit(FailureState(response.error));
+    }
   }
 }
